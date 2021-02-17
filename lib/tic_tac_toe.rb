@@ -86,6 +86,22 @@ def won?(board)
   return nil 
 end
 
+def full?(board)
+  counter = 0
+  board.each do |element|
+    if element == "X" || element == "O"
+      counter += 1
+    else
+      # do nothing
+    end
+  end
+  if counter == 9 
+    return true
+  else
+    return false
+  end
+end
+
 
 
 
