@@ -34,8 +34,13 @@ def position_taken?(board, location)
 end
 
 def valid_move?(board, index)
-  index.between?(0,8) && !position_taken(board, index)
-end
+  def position_taken?(array, ind)
+    if array[ind] == " " || array[ind] == "" || array[ind] == nil 
+      return false 
+    else
+      return true
+    end
+  end 
 
 
   
