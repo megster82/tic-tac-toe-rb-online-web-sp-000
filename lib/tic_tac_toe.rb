@@ -149,8 +149,3 @@ def play(baord)
     #do nothing
   end
 end
-
-
-
-  
-  
