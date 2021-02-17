@@ -57,26 +57,27 @@ def current_player(board)
   end
 end
 
-def turn(board)
-  puts "Please enter 1-9:"
-  input = gets.strip
-  if !valid_move?(board, input)
-    turn(board)
-  end
-  move(board, input, current_player(board))
-  display_board(board)
-end
 # def turn(board)
-#   puts "Please enter 1-9:"        # ask for input 
-#   input = gets.strip              # get input 
-#   index = input_to_index(input)   # convert input to index 
-#   if valid_move?(board, index)    # if move is valid,  
-#     move(board, index, current_player(board))   #make move for index
-#     display_board(board)          # & show board 
-#   else                            # else 
-#     turn(board)                   # ask input again until valid move
+#   puts "Please enter 1-9:"
+#   input = gets.strip
+#   if !valid_move?(board, input)
+#     turn(board)
 #   end
+#   move(board, input, current_player(board))
+#   display_board(board)
 # end
+
+def turn(board)
+  puts "Please enter 1-9:"        # ask for input 
+  input = gets.strip              # get input 
+  index = input_to_index(input)   # convert input to index 
+  if valid_move?(board, index)    # if move is valid,  
+    move(board, index, current_player(board))   #make move for index
+    display_board(board)          # & show board 
+  else                            # else 
+    turn(board)                   # ask input again until valid move
+  end
+end
 
 def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
