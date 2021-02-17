@@ -28,3 +28,10 @@ end
 def move(board, index, marker)
   board[index] = marker
 end
+
+def position_taken?(board, location)
+  board[location] != " " && board[location] != ""
+end
+
+
+  
