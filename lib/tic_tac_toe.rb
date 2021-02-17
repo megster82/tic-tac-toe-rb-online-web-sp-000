@@ -121,9 +121,9 @@ end
 def winner(board)
   if won?(board)
     WIN_COMBINATIONS.each do |win_combination|
-      position1 = board[win_index1]
-      position2 = board[win_index2]
-      position3 = board[win_index3]
+      position1 = board[win_combination[0]]
+      position2 = board[win_combination[1]]
+      position3 = board[win_combination[2]]
         if (position1 == "X" && position2 == "X" && position3 == "X")
           return "X"
         elsif (position1 == "O" && position2 == "O" && position3 ==  "O")
