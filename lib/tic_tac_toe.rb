@@ -124,10 +124,10 @@ def winner(board)
       position1 = board[win_index1]
       position2 = board[win_index2]
       position3 = board[win_index3]
-        if position1 == "X" && position2 == "X" && position3 == "X"
+        if (position1 == "X" && position2 == "X" && position3 == "X")
           return "X"
-        elsif position1 == "O" && position2 == "O" && position3 == "O"
-        return "O"
+        elsif (position1 == "O" && position2 == "O" && position3 ==  "O")
+          return "O"
         else
           #do nothing
         end
